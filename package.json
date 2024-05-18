@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "An example to study and understand load balancers",
   "main": "src/index.ts",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "scripts": {
     "dev": "npx nodemon src/index.ts",
     "test": "jest"
