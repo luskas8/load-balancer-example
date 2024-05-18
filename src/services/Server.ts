@@ -1,4 +1,4 @@
-import Express, { Express as TExpress } from "express";
+import Express, { Router as TRouter, Express as TExpress } from "express";
 
 export class Server {
     private app: TExpress;
@@ -15,7 +15,7 @@ export class Server {
         this.app.use(Express.json());
     }
 
-    public route(routes: any) {
+    public route(routes: TRouter) {
         this.app.use(routes);
     }
 
