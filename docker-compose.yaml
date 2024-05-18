@@ -1,5 +1,3 @@
-version: '3.9'
-
 networks:
   nginx_net:
     driver: bridge
@@ -27,6 +25,12 @@ services:
       - SERVER_NAME=backend-1
     networks:
       - nginx_net
+    healthcheck:
+      test: "curl http://127.0.0.1.nip.io:8080/"
+      interval: 10s
+      timeout: 30s
+      retries: 5
+      start_period: 30s
   
   backend2:
     container_name: backend-2
@@ -40,3 +44,9 @@ services:
       - SERVER_NAME=backend-2
     networks:
       - nginx_net
+    healthcheck:
+      test: "curl http://127.0.0.1.nip.io:8080/"
+      interval: 10s
+      timeout: 30s
+      retries: 5
+      start_period: 30s

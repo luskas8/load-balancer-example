@@ -5,6 +5,7 @@ This repository contains a simple implementation of a load balancer to demonstra
 ## Features
 
 - **Simple Load Balancer Logic**: Distributes incoming network traffic across multiple backend servers.
+- **Health Check System**: Monitors the health of the backend servers to ensure traffic is only routed to operational servers.
 
 ## Getting Started
 
