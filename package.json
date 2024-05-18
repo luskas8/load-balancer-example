@@ -7,7 +7,7 @@
     "node": ">=14.0.0"
   },
   "scripts": {
-    "dev": "npx nodemon src/index.ts",
+    "dev": "npx nodemon -L src/index.ts",
     "test": "jest"
   },
   "keywords": [
